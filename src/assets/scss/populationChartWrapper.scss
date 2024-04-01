@@ -1,0 +1,72 @@
+.populationChartWrapper{
+    .topBlock, .countryName, .bottomBlock{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p{
+            margin: 0px 2px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+    }
+    .countryName{
+        p{
+            font-size: 12px;
+            cursor: pointer;
+            margin: 0px 6px;
+        }
+    }
+    .topBlock{
+        border-bottom: 1px solid #7e7b7b;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .bottomBlock{
+        border-top: 1px solid #7e7b7b;
+        padding-top: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+}
+.buttonPrimary{
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    background: #00ff72;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.doughnutChart{
+    .topBlock, .bottomBlock{
+        display: flex;
+    justify-content: center;
+    }
+    .doughnutDiv{
+        justify-content: center;
+        display: flex;
+    }
+    .doughnutChartList{
+        .doughnutChartListInner{
+            display: flex;
+            justify-content: space-between;
+            margin: 12px 0px;
+            .left, .right{
+                p{
+                    margin: 3px 0px;
+                    color: #fff;
+                    font-size: 12px;
+                }
+            }
+            .leftOuter{
+                display: flex;
+                align-items: center;
+            }
+            .colourBlock{
+                margin-right: 7px;
+            }
+        }
+    }
+}
