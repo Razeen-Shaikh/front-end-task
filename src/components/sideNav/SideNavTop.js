@@ -2,7 +2,6 @@ import React from "react";
 import {useLocation} from 'react-router-dom'
 import { MdMenu } from "react-icons/md";
 import { TbHome } from "react-icons/tb";
-
 import { GoOrganization } from "react-icons/go";
 import { FaCodepen } from "react-icons/fa6";
 import logo from '../../assets/image/logo2.png'
@@ -33,10 +32,8 @@ function SideNavTop({isOpen, handleToggleMenu}) {
             <div className="sideNavDynamicMenuWrapper commonMenuWrapper">
             <Link to='/' className={pathname ==='/'? 'active': ''}>
                 <div className="menuWrapper">
-                    
                     <div className="iconBlock"><TbHome /></div>
                     {isOpen && <p>Home</p>}
-                  
                 </div>
                 </Link>
                 <Link to='/organization' className={pathname ==='/organization'? 'active': ''}>
@@ -45,7 +42,6 @@ function SideNavTop({isOpen, handleToggleMenu}) {
                     {isOpen && <p>Organization</p>}
                 </div>
                 </Link>
-
                 <Link to='/assets' className={pathname ==='/assets'? 'active': ''}>
                 <div className="menuWrapper">
                     <div className="iconBlock"><FaCodepen /></div>

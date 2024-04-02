@@ -1,127 +1,172 @@
-.populationChartWrapper{
-    height: 100%;
+.populationChartWrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .topBlock,
+  .countryName,
+  .bottomBlock {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    .topBlock, .countryName, .bottomBlock{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        p{
-            margin: 0px 2px;
-            color: #fff;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
+    align-items: center;
+    p {
+      margin: 0px 2px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
     }
-    .countryName{
-        p{
-            font-size: 12px;
-            cursor: pointer;
-            margin: 0px 6px;
-        }
+  }
+  .countryName {
+    p {
+      font-size: 12px;
+      cursor: pointer;
+      margin: 0px 6px;
     }
-    .topBlock{
-        border-bottom: 1px solid #7e7b7b;
-        padding-bottom: 0.5rem;
-        margin-bottom: 0.5rem;
-    }
-    .bottomBlock{
-        border-top: 1px solid #7e7b7b;
-        padding-top: 0.5rem;
-        margin-top: 0.5rem;
-    }
-    .lineChart{
-        max-height: 250px;
-    }
-
+  }
+  .topBlock {
+    border-bottom: 1px solid #7e7b7b;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .bottomBlock {
+    border-top: 1px solid #7e7b7b;
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .lineChart {
+    max-height: 250px;
+  }
 }
-.buttonPrimary{
-    padding: 5px 10px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 500;
-    background: #007534;
-    border-radius: 4px;
-    cursor: pointer;
+.buttonPrimary {
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  background: #007534;
+  border-radius: 4px;
+  cursor: pointer;
 }
-.doughnutChart{
-    height: 100%;
+.doughnutChart {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .topBlock,
+  .bottomBlock {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    .topBlock, .bottomBlock{
-        display: flex;
     justify-content: center;
-    }
-    .doughnutDiv{
-        justify-content: center;
-        display: flex;
-    }
-    .doughnutChartList{
-        .doughnutChartListInner{
-            display: flex;
-            justify-content: space-between;
-            margin: 12px 0px;
-            .left, .right{
-                p{
-                    margin: 0px 0px 5px 0px;
-                    color: #fff;
-                    font-size: 12px;
-                }
-            }
-            .leftOuter{
-                display: flex;
-                align-items: center;
-            }
-            .colourBlock{
-                margin-right: 7px;
-            }
+  }
+  .doughnutDiv {
+    justify-content: center;
+    display: flex;
+  }
+  .doughnutChartList {
+    .doughnutChartListInner {
+      display: flex;
+      justify-content: space-between;
+      margin: 12px 0px;
+      .left,
+      .right {
+        p {
+          margin: 0px 0px 5px 0px;
+          color: #fff;
+          font-size: 12px;
         }
+      }
+      .leftOuter {
+        display: flex;
+        align-items: center;
+      }
+      .colourBlock {
+        margin-right: 7px;
+      }
     }
+  }
 }
 
-.newsSection{
-    .footer{
-        margin-top: 30px;
-       
+.newsSection {
+  .footer {
+    margin-top: 30px;
+  }
+  .footer,
+  .footerInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    svg {
+      margin-right: 5px;
     }
-    .footer, .footerInner{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #fff;
-        svg{
-            margin-right: 5px;
-        }
+  }
+  .newsSectionDiv {
+    display: flex;
+    justify-content: space-between;
+    background: #000;
+    padding: 30px 5px;
+    border-radius: 4px;
+  }
+  .newsSectionMiddle {
+    p {
+      margin: 0px;
+      font-size: 13px;
+      color: #fff;
+      line-height: 1.5;
     }
-    .newsSectionDiv{
-        display: flex;
-        justify-content: space-between;
-        background: #000;
-        padding: 30px 5px;
-        border-radius: 4px;
-    
+    .head {
+      p {
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
     }
-    .newsSectionMiddle{
-        p{
-            margin: 0px;
-            font-size: 13px;
-            color: #fff;
-            line-height: 1.5;
-        }
-        .head{
-            p{
-                font-weight: 600;
-                margin-bottom: 5px;
-            }
-        }
+  }
+  .imageSection {
+    svg {
+      color: #fff;
+      padding: 0px 5px;
     }
-    .imageSection{
-        svg{
-            color: #fff;
-            padding: 0px 5px;
-        }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .populationChartWrapper .topBlock p {
+    margin: 0px 2px;
+    font-size: 9px;
+  }
+  .width-50 {
+    width: 40%;
+  }
+  .imageSection {
+    display: none;
+  }
+  .newsSection .newsSectionMiddle p {
+    font-size: 10px;
+  }
+  .newsSection .footer svg,
+  .newsSection .footerInner svg {
+    font-size: 10px;
+  }
+  .populationChartWrapper .bottomBlock p {
+    font-size: 9px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+  .populationChartWrapper .topBlock p {
+    font-size: 8px;
+  }
+  .populationChartWrapper .bottomBlock p {
+    font-size: 9px;
+  }
+  .doughnutChart .doughnutChartList .doughnutChartListInner .left p,
+  .doughnutChart .doughnutChartList .doughnutChartListInner .right p {
+    font-size: 9px;
+  }
+  .newsSection .newsSectionMiddle p {
+    font-size: 10px;
+  }
+  .lineChart {
+    canvas {
+      height: 90px !important;
     }
+  }
 }

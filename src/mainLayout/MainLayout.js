@@ -1,18 +1,25 @@
 import React from "react";
-import  SideNavBar  from "../components/sideNav/SideNavBar";
-import TopHeader from "../components/topHeader/TopHeader"
-import '../assets/scss/mainLayout.scss'
+import { useSelector } from "react-redux";
+import SideNavBar from "../components/sideNav/SideNavBar";
+import TopHeader from "../components/topHeader/TopHeader";
+import "../assets/scss/mainLayout.scss";
 
 function MainLayout(props) {
-    return (
-        <div className="mainLayout">
-            <SideNavBar />
-            <div className="rightMainContent">
-                <TopHeader/>
-                {props.children}
-            </div>
-        </div>
-    );
+  const isOpen = useSelector((state) => state.commonSlice.isOpen);
+
+  return (
+    <div className="mainLayout">
+      <SideNavBar />
+      <div
+        className={
+          isOpen ? "rightMainContent rightMainContentOpen" : "rightMainContent"
+        }
+      >
+        <TopHeader />
+        {props.children}
+      </div>
+    </div>
+  );
 }
 
 export default MainLayout;

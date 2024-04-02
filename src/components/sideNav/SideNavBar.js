@@ -1,23 +1,32 @@
-import React, {useState} from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-import SideNavTop from './SideNavTop'
-import SideNavStaticMenu from './SideNavStaticMenu'
-import '../../assets/scss/sideNav.scss'
+import SideNavTop from "./SideNavTop";
+import SideNavStaticMenu from "./SideNavStaticMenu";
+import "../../assets/scss/sideNav.scss";
+import { handleMenuToggle } from "../../redux/reducers/commonSlice";
+import { MdMenu } from "react-icons/md";
 
+function SideNavBar(props) {
+  const dispatch = useDispatch();
+  const isOpen = useSelector((state) => state.commonSlice.isOpen);
 
-function SideNavBar(props){
-    const [isOpen, setOpen] = useState(true)
-    
-    const handleToggleMenu = ()=>{
-        setOpen(!isOpen)
-    }
+  const handleToggleMenu = () => {
+    dispatch(handleMenuToggle(isOpen));
+  };
 
-    return(
-        <div className={isOpen ? "sideNavWrapper sideNavWrapperOpen": "sideNavWrapper sideNavWrapperClose"}>
-            <SideNavTop isOpen={isOpen} handleToggleMenu={handleToggleMenu}/>
-            <SideNavStaticMenu isOpen={isOpen}/>
-        </div>
-    )
+  return (
+    <div
+      className={
+        isOpen
+          ? "sideNavWrapper sideNavWrapperOpen"
+          : "sideNavWrapper sideNavWrapperClose"
+      }
+    >
+      <SideNavTop isOpen={isOpen} handleToggleMenu={handleToggleMenu} />
+      <SideNavStaticMenu isOpen={isOpen} />
+    </div>
+  );
 }
 
 export default SideNavBar;

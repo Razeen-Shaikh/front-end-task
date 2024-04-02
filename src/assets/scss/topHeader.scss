@@ -1,37 +1,62 @@
 .topHeaderWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 0.5rem 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
 
-    .left {
-        .heading {
-            font-size: 16px;
-            font-weight: 600;
-            margin: 0px 0px 3px;
-            color: #fff;
-        }
-
-        .subHeading {
-            font-size: 14px;
-            font-weight: 400;
-            margin: 0px;
-            color: #fff;
-            span{
-                color: #007534;
-            }
-        }
+  .left {
+    .heading {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0px 0px 3px;
+      color: #fff;
     }
 
-    .right {
-        p {
-            margin: 0px;
-            background: #007534;
-            color: #fff;
-            padding: 5px 10px;
-            font-weight: 600;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+    .subHeading {
+      font-size: 14px;
+      font-weight: 400;
+      margin: 0px;
+      color: #fff;
+      span {
+        color: #007534;
+      }
     }
+  }
+
+  .right {
+    p {
+      margin: 0px;
+      background: #007534;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .topHeaderWrapperOpen {
+    width: 90%;
+  }
+  .topHeaderWrapper .right p {
+    font-size: 12px;
+  }
+  .topHeaderWrapper .left .heading {
+    font-size: 13px;
+  }
+  .topHeaderWrapper .left .subHeading {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 767px) {
+  .topHeaderWrapper .left .heading {
+    font-size: 9px;
+  }
+  .topHeaderWrapper .left .subHeading {
+    font-size: 9px;
+  }
+  .topHeaderWrapper .right p {
+    font-size: 9px;
+  }
 }

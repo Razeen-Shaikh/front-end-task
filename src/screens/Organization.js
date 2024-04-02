@@ -1,8 +1,6 @@
-import React, { useEffect } from "react";;
+import React from "react";
 
-function Organization(props) {
-    return(
-        <h1>Organization</h1>
-    )
+function Organization() {
+  return <h1>Organization</h1>;
 }
 export default Organization;
