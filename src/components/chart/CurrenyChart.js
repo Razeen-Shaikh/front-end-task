@@ -55,7 +55,7 @@ export function CurrenyChart() {
     <div className="doughnutChartListInner">
       <div className="left">
         {labels.map((item) => (
-          <div className="leftOuter">
+          <div key={item} className="leftOuter">
             <div
               style={{
                 backgroundColor: colorBycurrency[item],
@@ -70,7 +70,7 @@ export function CurrenyChart() {
       </div>
       <div className="right">
         {data.map((item) => (
-          <p>{item}</p>
+          <p key={item}>{item}</p>
         ))}
       </div>
     </div>

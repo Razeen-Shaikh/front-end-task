@@ -1,11 +1,9 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-
 import SideNavTop from "./SideNavTop";
 import SideNavStaticMenu from "./SideNavStaticMenu";
 import "../../assets/scss/sideNav.scss";
 import { handleMenuToggle } from "../../redux/reducers/commonSlice";
-import { MdMenu } from "react-icons/md";
 
 function SideNavBar(props) {
   const dispatch = useDispatch();
